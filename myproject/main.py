@@ -49,9 +49,14 @@ diseases_list = {15: 'Fungal infection', 4: 'Allergy', 16: 'GERD', 9: 'Chronic c
 # Model Prediction function
 def get_predicted_value(patient_symptoms):
     input_vector = np.zeros(len(symptoms_dict))
+
     for item in patient_symptoms:
-        input_vector[symptoms_dict[item]] = 1
-    return diseases_list[svc.predict([input_vector])[0]]
+        item = item.lower()
+        if item in symptoms_dict:
+            input_vector[symptoms_dict[item]] = 1
+
+    prediction = svc.predict([input_vector])[0]
+    return diseases_list[prediction]
 
 
 
