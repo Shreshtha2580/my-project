@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog Post</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css" integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <style>
+       footer{
+padding-top:20px;
+}
+ body{
+            background: #000;
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .logo {
+            width: 50px;
+            height: 50px;
+            color: black;
+            margin-top: 0;
+            margin-left: 2px;
+        }
+
+        .myimg {
+            width: 50px;
+            height: 50px;
+            border: 2px solid black;
+            border-radius: 25px;
+        }
+
+ .parent{
+     margin-top: 50px;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    place-items: center;
+   }
+   .child{
+
+    line-height: 30px;
+
+    display: flex;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   }
+   .child:nth-child(2){
+    border-left: 3px solid white;
+   }
+
+
+    </style>
+  </head>
+  <body class="bg-dark text-light">
+   <nav class="navbar navbar-expand-lg navbar-dark bg-r">
+        <div class="container-fluid">
+            <!-- Logo at the top-left corner -->
+            <div class="logo">
+                <img class="myimg" src="{{ url_for('static', filename='img.png') }}" alt="">
+            </div>
+
+            <a class="navbar-brand" href="#">Health Center</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{{ url_for('home') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/developer">Developer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/blog">Blog</a>
+                    </li>
+                </ul>
+                <!-- <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> -->
+            </div>
+        </div>
+    </nav>
+   <br/>
+   <div class="container mt-5">
+    <div class="row text-center mt-5">
+        <div class="col-sm-12">
+            <h1>Building a Symptom-Based Disease Diagnosis Web App with Flask and Machine Learning</h1>
+        <p class="mt-5">In the age of technology and information, access to accurate and timely healthcare is more critical than ever. With the increasing importance of remote healthcare solutions, we embarked on a journey to develop a symptom-based disease diagnosis web application. Leveraging Flask for the backend and a Decision Tree Classifier model, we created a user-friendly platform that can help users identify potential illnesses based on their reported symptoms.</p>
+        </div>
+    </div>
+   </div>
+   <div class="parent">
+    <div class="child">
+        <h1>The Problem</h1>
+        <p>The project began with recognizing a common issue: people often experience symptoms and want quick answers about their health concerns. It can be challenging to differentiate between various diseases, especially when symptoms overlap. Our goal was to provide a convenient solution for users to input their symptoms and receive potential diagnoses.</p>
+
+    </div>
+    <div class="child">
+        <h1>The Solution</h1>
+        <p>We developed a web app that allows users to enter a list of symptoms they are experiencing. The app then uses a pre-trained Decision Tree Classifier model to predict the most likely disease based on the provided symptoms. Here's how it works:</p>
+         <ol>
+            <li>
+                <p>  <b>Symptom Input:</b> Users enter their symptoms through a user-friendly interface. The web app supports a wide range of symptoms, making it versatile for different scenarios.
+</p>
+            </li>
+            <li>
+                <p>  <b>Machine Learning Model: </b>We trained a Decision Tree Classifier using a dataset containing symptoms and corresponding diseases. The model is capable of predicting diseases based on input symptoms.
+</p>
+            </li>
+             <li>
+                <p>  <b>Prediction: </b>The app uses the model to predict the most likely disease, providing users with instant information about potential health concerns.
+</p>
+            </li>
+            <li>
+                <p>  <b>Additional Information:  </b> To enhance user experience, the app also provides additional information about the predicted disease. This includes a description of the disease, recommended precautions, medications, dietary advice, and workout tips.
+</p>
+            </li>
+
+
+        </ol>
+    </div>
+   </div>
+   <div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Key Features</h1>
+           <ul type="circle">
+            <li><b>User-Friendly Interface:</b> The web app boasts an intuitive and easy-to-navigate interface, ensuring that users can input their symptoms without any hassle.</li>
+            <li>
+               <b> Accurate Predictions:</b> Leveraging machine learning, our model provides accurate disease predictions based on the symptoms provided by the user.
+            </li>
+            <li>
+              <b>  Comprehensive Information:</b> In addition to predictions, the app offers comprehensive information about the predicted disease, including descriptions, precautions, medications, diet recommendations, and workout tips.
+            </li>
+            <li><b>Educational Content:</b> To empower users with knowledge, the app includes informative blog posts about various health topics.</li>
+           </ul>
+        </div>
+    </div>
+   </div>
+   <div class="container mt-5">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Conclusion</h1>
+            <p>Our Symptom-Based Disease Diagnosis Web App brings the power of machine learning and healthcare information to the fingertips of users. It serves as a valuable resource for individuals looking to gain insights into their health conditions quickly and conveniently. By combining technology and healthcare, we aim to make healthcare more accessible and user-centric. In an era where remote healthcare solutions are gaining prominence, this project represents a significant step forward in providing accessible and reliable healthcare information to the masses. We hope that this project will contribute to better health awareness and ultimately improve the well-being of individuals worldwide.</p>
+        </div>
+    </div>
+        <footer class="container-fluid bg-dark text-light mt-5" style="font-weight: bolder;">
+        <div class="row text-center">
+            <div class="col-sm-4">
+                <h1>About Us</h1>
+                <p>Welcome to medical health care center .Where health meets technology for a brighter,healthier future</p>
+            </div>
+            <div class="col-sm-4" style="display: flex;flex-direction: column;">
+                <a href="{{ url_for('home') }}" style="text-decoration: none;color: white;">Home</a>
+                <a href="{{ url_for('about') }}" style="text-decoration: none;color: white;">About</a>
+                <a href="{{ url_for('contact') }}" style="text-decoration: none;color: white;">Contact</a>
+                <a href="{{ url_for('developer') }}" style="text-decoration: none;color: white;">Developer</a>
+                <a href="{{ url_for('blog') }}" style="text-decoration: none;color: white;">Blog</a>
+
+            </div>
+            <div class="col-sm-4">
+                <h1>Follow Us</h1>
+                <a href="https://www.instagram.com/_2busy_4_you?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" style="text-decoration: none;margin: 10px;">
+<i class="bi bi-instagram" style="color: rgb(247, 7, 191);font-size: xx-large;text-decoration: none;"></i>
+
+                </a>
+                <a href="https://www.linkedin.com/in/shivam-shukla-8555a5373?utm_source=share_via&utm_content=profile&utm_medium=member_android" style="text-decoration: none;margin: 10px;">
+<i class="bi bi-linkedin" style="color:rgb(47, 47, 237);font-size: xx-large;"></i>
+
+                </a>
+                <a href="https://www.facebook.com/share/1CXABrvirK/" style="text-decoration: none;margin: 10px;">
+<i class="bi bi-facebook" style="color:rgb(6, 128, 241);font-size: xx-large;text-decoration: none;"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="row text-light text-center mt-5">
+            <div class="col-sm-12">
+               <p> &copy; Copyright  2026 Shivam And Gourp. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+   </div> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>

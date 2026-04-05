@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css" integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <style>
+      footer{
+padding-top:20px;
+}
+     body{
+            background: #000 !important;
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .logo {
+            width: 50px;
+            height: 50px;
+            color: black;
+            margin-top: 0;
+            margin-left: 2px;
+        }
+
+        .myimg {
+            width: 50px;
+            height: 50px;
+            border: 2px solid black;
+            border-radius: 25px;
+        }
+
+
+ .parent{
+        margin-top: 20px;
+        display: grid;
+        height: auto;
+        gap: 12px;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .child{
+        height: 300px;
+        width: 300px;
+        display:flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: 2px solid white;
+        border-radius: 11px;
+        margin: auto;
+    }
+
+    .child:hover{
+        box-shadow: 0px 0px 30px white;
+    }
+/* for mobiles */
+    @media (min-width:280px) and (max-width:767px) {
+        .parent{
+            margin: auto;
+            width: auto !important;
+            height: auto !important;
+            display: grid !important;
+            grid-template-columns: auto !important;
+            gap: 12px !important;
+        }
+        .child{
+            display: grid;
+            width: 100%;
+        }
+
+
+    }
+    /* for tablets */
+    @media (min-width:768px) and (max-width:1024px) {
+        .parent{
+            margin-top: 20px;
+            width: auto !important;
+            height: auto !important;
+            display: grid !important;
+            grid-template-columns: auto auto !important;
+            gap: 12px !important;
+        }
+        .child{
+            display: grid;
+            width: 100%;
+        }
+
+
+    }
+
+    </style>
+</head>
+<body class="bg-dark text-light">
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <!-- Logo at the top-left corner -->
+            <div class="logo">
+                <img class="myimg" src="{{ url_for('static', filename='img.png') }}" alt="">
+            </div>
+
+            <a class="navbar-brand" href="#">Health Center</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{{ url_for('home') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/developer">Developer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blog">Blog</a>
+                    </li>
+                </ul>
+                <!-- <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> -->
+            </div>
+        </div>
+    </nav>
+<br/>
+ <div class="container mt-5 text-center">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>About Our group: Computer Engineer</h1>
+
+            </div>
+        </div>
+    </div>
+     <div class="container mt-5 text-center">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Meet the Developer</h1>
+                <p>Hello, I'm Ayushman, your AI and Machine Learning Engineer with over 5 years of experience in the field. I am passionate about harnessing the power of technology to make a positive impact on people's lives. Allow me to share a bit about my journey in the world of artificial intelligence and machine learning.
+</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="parent">
+        <div class="child">
+                <h5>My Expertise
+</h5>
+<p>With a strong academic background in computer science and a deep fascination for AI and ML, I embarked on a journey that has taken me across the globe, working on diverse and innovative projects. Over the years, I've had the privilege of collaborating on international projects that have pushed the boundaries of what's possible in AI and ML.
+</p>
+        </div>
+        <div class="child">
+ <h5>A Commitment to Excellence
+</h5>
+<p>My work is driven by a commitment to excellence and a belief that technology should be accessible and beneficial to everyone. Whether it's developing predictive models, creating intelligent algorithms, or designing user-friendly interfaces, I strive for solutions that are both cutting-edge and user-centric.
+</p>
+        </div>
+        <div class="child">
+  <h5>Passion for Health Tech
+</h5>
+<p>The development of [Your Website Name] represents a convergence of my passion for AI and my dedication to improving healthcare accessibility. I believe that AI has the potential to transform the way we approach healthcare, making it more personalized and informative. This platform is a testament to that vision.
+</p>
+        </div>
+        <div class="child">
+  <h5>Join Me on this Journey
+</h5>
+<p>I invite you to explore [Your Website Name] and experience firsthand the fusion of AI and healthcare. Together, we can empower individuals with knowledge, promote well-being, and contribute to a brighter and healthier future.
+</p>
+        </div>
+    </div>
+ <footer class="container-fluid bg-dark text-light mt-5" style="font-weight: bolder;">
+        <div class="row text-center">
+            <div class="col-sm-4">
+                <h1>About Us</h1>
+                <p>Welcome to medical health care center .Where health meets technology for a brighter,healthier future</p>
+            </div>
+            <div class="col-sm-4" style="display: flex;flex-direction: column;">
+                 <a href="{{ url_for('home') }}" style="text-decoration: none;color: white;">Home</a>
+                <a href="{{ url_for('about') }}" style="text-decoration: none;color: white;">About</a>
+                <a href="{{ url_for('contact') }}" style="text-decoration: none;color: white;">Contact</a>
+                <a href="{{ url_for('developer') }}" style="text-decoration: none;color: white;">Developer</a>
+                <a href="{{ url_for('blog') }}" style="text-decoration: none;color: white;">Blog</a>
+
+            </div>
+            <div class="col-sm-4">
+                <h1>Follow Us</h1>
+                <a href="https://www.instagram.com/_2busy_4_you?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" style="text-decoration: none;margin: 10px;">
+<i class="bi bi-instagram" style="color: rgb(247, 7, 191);font-size: xx-large;text-decoration: none;"></i>
+
+                </a>
+                <a href="https://www.linkedin.com/in/shivam-shukla-8555a5373?utm_source=share_via&utm_content=profile&utm_medium=member_android" style="text-decoration: none;margin: 10px;">
+<i class="bi bi-linkedin" style="color:rgb(47, 47, 237);font-size: xx-large;"></i>
+
+                </a>
+                <a href="https://www.facebook.com/share/1CXABrvirK/" style="text-decoration: none;margin: 10px;">
+<i class="bi bi-facebook" style="color:rgb(6, 128, 241);font-size: xx-large;text-decoration: none;"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="row text-light text-center mt-5">
+            <div class="col-sm-12">
+               <p> &copy;  Copyright  2026 Shivam And Gourp. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+
+</html>
